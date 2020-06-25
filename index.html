@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="script.js"></script>
+    <title>calculator</title>
+</head>
+
+<body>
+    <div id="title">This calculator was made with html ,css and JavaScript</div>
+    <br><br><br><br>
+
+    <div id="title">
+        
+        <div id="MainBox">
+            
+            <div>
+                <span id="textBox">&nbsp;</span>
+            </div>
+            <div>
+                <span id="text"></span>
+            </div>
+
+            <div id="buttonBox">
+                <br>
+                <div>
+                    <span id="button" onclick="GetButtons(7,1)" >7</span> <span id="button" onclick="GetButtons(8,1)">8</span> <span id="button" onclick="GetButtons(9,1)">9</span> <span id="button" onclick="GetButtons('x',0)">x</span>
+                </div>
+                <br>
+                <div>
+                    <span id="button" onclick="GetButtons(4,1)">4</span> <span id="button" onclick="GetButtons(5,1)">5</span> <span id="button"onclick="GetButtons(6,1)">6</span> <span id="button"onclick="GetButtons('÷',0)">÷</span>
+                </div>
+                <br>
+                <div>
+                    <span id="button"onclick="GetButtons(1,1)">1</span> <span id="button"onclick="GetButtons(2,1)">2</span> <span id="button"onclick="GetButtons(3,1)">3</span> <span id="button"onclick="GetButtons('─',0)">─</span>
+                </div>
+                <br>
+                <div>
+                    <span id="button" style="text-align: left;" onclick="GetButtons('DEL',1)">&nbsp;DEL</span> <span id="button"onclick="GetButtons(0,1)">0</span> <span id="button"onclick="GetButtons('=',0)">=</span> <span id="button"onclick="GetButtons('+',0)">+</span>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+
+</body>
+</html>
