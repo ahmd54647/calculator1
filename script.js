@@ -1,53 +1,47 @@
-var str = "";
-var y1 = 1;
-var numbers = [];
-var operations = [""];
-var answer;
-function GetButtons(x, y) {
-    if (x == "DEL") {
-        str = str.substring(0, (str.length) - 1);
-        document.getElementById("text").innerHTML = str;
-    } else if (x == "=") {
-        var q = "";
-        for (var i = 0; i < str.length; i++) {
-            if (str[i] == "+" || str[i] == "÷" || str[i] == "─" || str[i] == "x") {
-                numbers.push(q);
-                operations.push(str[i]);
-                q = "";
-            } else {
-                q += str[i];
-            }
-        }
-        numbers.push(q);
-        answer = numbers[0];
-        for (var j = 0; j < numbers.length; j++) {
-            if (operations[j] == '+') {
-                answer = parseInt(answer) + parseInt(numbers[j]);
-            } else if (operations[j] == '─') {
-                answer = parseInt(answer) - parseInt(numbers[j]);
-            } else if (operations[j] == 'x') {
-                answer = parseInt(answer) * parseInt(numbers[j]);
-            } else if (operations[j] == '÷') {
-                answer = parseInt(answer) / parseInt(numbers[j]);
-            }
-        }
-        //lock for * and do the opration on it index and -1 of it index then delete it
-        document.getElementById("text").innerHTML = "<span style=\"position:absolute;top:3%;left:100%;color:red;width:500px;height:30px;\"> كل زق ماعرفت اسويها  </span>";
-        str = "";
-        numbers = [];
-        operations = [""];
-        answer = 0;
-    } else {
-        if (y) {
-            str += x;
-            document.getElementById("text").innerHTML = str;
-            y1 = 1;
-        } else {
-            if (y1) {
-                str += x;
-                document.getElementById("text").innerHTML = str;
-                y1 = y;
-            }
-        }
-    }
+body { 
+    background-color: #202124;
 }
+#title {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    user-select: none;
+}
+#MainBox {
+    width:500px;
+    height:430px;
+    border:2px solid white;
+    position:relative;
+    left: 35%;
+}
+#textBox {
+    background-color: white;
+    border-radius: 8px;
+    padding-left: 200px;
+    padding-right: 220px;
+    position: absolute;
+    top: 3%;
+    left: 7%;
+}
+#text {
+    position:absolute;
+    top:3%;
+    left:7%;
+    color: black;
+    width:30px;
+    height:30px;
+}
+#buttonBox {
+    width:500px;
+    height:400px;
+    position:relative;
+    top: 7%;
+}
+#button {
+    background-color: #f44336;
+    border-radius: 8px;
+    display: inline-grid;
+    width:100px;
+    height:50px
+}
+
