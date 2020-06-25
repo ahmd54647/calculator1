@@ -23,16 +23,16 @@ function GetButtons(x, y) {
         for (var j = 0; j < numbers.length; j++) {
             if (operations[j] == '+') {
                 answer = parseInt(answer) + parseInt(numbers[j]);
-            }else if (operations[j] == '─') {
+            } else if (operations[j] == '─') {
                 answer = parseInt(answer) - parseInt(numbers[j]);
-            }else if (operations[j] == 'x') {
+            } else if (operations[j] == 'x') {
                 answer = parseInt(answer) * parseInt(numbers[j]);
-            }else if (operations[j] == '÷') {
+            } else if (operations[j] == '÷') {
                 answer = parseInt(answer) / parseInt(numbers[j]);
             }
         }
         //lock for * and do the opration on it index and -1 of it index then delete it
-        document.getElementById("text").innerHTML = "<span  style=\"left:100%; color:red;\"> كل زق ماعرفت اسويها  </span>";
+        document.getElementById("text").innerHTML = "<span style=\"position:absolute;top:3%;left:100%;color:red;width:500px;height:30px;\"> كل زق ماعرفت اسويها  </span>";
         str = "";
         numbers = [];
         operations = [""];
